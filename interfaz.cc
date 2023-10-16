@@ -45,6 +45,7 @@ void Interfaz::probarArbol(Arbol*& arbol){
 		//std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n'); 
 		switch(opcion){
 			case 1:
+				delete arbol;
 				arbol = new Arbol();
 				std::cout << "Arbol creado... :)" << std::endl << "Ya podemos empezar" << std::endl;
 				
@@ -206,6 +207,7 @@ void Interfaz::probarCola(Cola*& cola){
 		
 		switch(opcion){
 			case 1:
+				delete cola;
 				cola = new Cola();
 				std::cout << "Cola creada... :)" << std::endl << "Ya podemos empezar" << std::endl;
 				
