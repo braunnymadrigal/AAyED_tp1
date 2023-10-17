@@ -1,2 +1,3 @@
-# tp1new
-Algoritmos tp1
+# UCR ECCI Análisis de Algoritmos y Estructuras de Datos I Tarea Programada
+## Keylor Palacios
+## Braunny Madrigal
