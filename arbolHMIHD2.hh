@@ -2,13 +2,24 @@
 
 class Arbol {
 public:
+  struct Nodo {
+    char etiqueta;
+    bool ultHijo;
+    Nodo *hmi;
+    Nodo *hd;
+  };
+
+  // Create a type alias for the Nodo structure using 'using'
+  using Node = Nodo*;
+
+public:
   Arbol() { this->Iniciar(); }
 
   ~Arbol() { this->Destruir(); }
 
-  Iniciar() { raiz = nullptr; }
+  void Iniciar() { raiz = nullptr; }
 
-  Destruir() {
+  void Destruir() {
     this->Vaciar();
     delete this->raiz;
   }
@@ -199,12 +210,5 @@ private:
   }
 
 private:
-  struct Nodo {
-    char etiqueta;
-    bool ultHijo;
-    Nodo *hmi;
-    Nodo *hd;
-  };
-
   Nodo *raiz;
 };

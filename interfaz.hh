@@ -1,14 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <limits>
-#include <memory>
-
-#include "colaLSE.hh"
-//#include "arbolASP.hh"
-#include "arbolLSE.hh"
-//#include "arbolHMIHD.hh"
-//#include "arbolHMIHD2.hh"
+#include "algArbol.hh"
 
 class Interfaz {
 public:

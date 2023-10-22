@@ -15,6 +15,9 @@ public:
     Nodo *nodoOrg;
   };
 
+  // Create a type alias for the Nodo structure using 'using'
+  using Node = Nodo*;
+
 public:
   Arbol() { Iniciar(); }
 

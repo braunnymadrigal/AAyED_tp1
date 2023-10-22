@@ -39,6 +39,7 @@ void Interfaz::probarOps(Arbol *&arbol) {
     this->mostrarOperadoresArbol();
     opcion = this->getOpcion();
     // std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    Arbol::Node nuevoNodo;
     switch (opcion) {
     case 1:
       //delete arbol;
@@ -95,9 +96,10 @@ void Interfaz::probarOps(Arbol *&arbol) {
 
       std::cout << "\n¿En que posición quieres que este el nodo?: ";
       std::cin >> enteroAux;
-
-      arbol->AgregarHijo(arbol->getNodo(etiqueta1), etiqueta2, enteroAux);
-
+      nuevoNodo = arbol->getNodo(etiqueta1);
+      arbol->AgregarHijo(nuevoNodo, etiqueta2, enteroAux);
+      //arbol->AgregarHijo(arbol->getNodo(etiqueta1), etiqueta2, enteroAux);
+	  
       std::cout << "Se agrego el nuevo nodo ";
 
       break;

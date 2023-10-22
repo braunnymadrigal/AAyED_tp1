@@ -7,6 +7,9 @@ public:
     int padre;
   };
 
+  // Create a type alias for the Nodo structure using 'using'
+  using Node = int;
+
 public:
   Arbol() { this->Iniciar(); }
 

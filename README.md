@@ -4,10 +4,10 @@ Estudiantes: Keylor Palacios C25770 / Braunny Madrigal C24436
 ## Proyecto GIT: https://github.com/braunnymadrigal/AAyED_tp1.git
 
 ## ¿Cómo compilar y correr?
-Abrir el archivo "interfaz.hh" y elegir la estructura del arbol con la que se desea ejecutar las pruebas, o sea se deben comentar las otras 3 estructuras de datos. Cuando este paso esta listo se puede proceder a compilar de la siguiente forma:
+Abrir el archivo "algArbol.hh" y elegir la estructura del arbol con la que desea ejecutar las pruebas (soporte para operadores basicos y algoritmos), o sea se deben comentar las otras 3 estructuras de datos. Cuando este paso esta listo se puede proceder a compilar de la siguiente forma:
 1. Abrir shell en el directorio principal del proyecto
 2.a Para compilar puede: ejecutar el comando de la siguiente manera "g++ main.cc interfaz.cc -o algoritmos"
-2.b Para compilar puede: escribir make compilar en la consola
+2.b Para compilar puede: escribir make compile en la consola
 3. Ejecutar el comando ./algoritmos para correrlo
 
 ## ¿Cómo se usa?

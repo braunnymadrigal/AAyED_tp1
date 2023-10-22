@@ -2,6 +2,16 @@
 
 class Arbol {
 public:
+  struct Nodo {
+    char etiqueta;
+    Nodo *hijoIzq;
+    Nodo *hermanoDer;
+  };
+
+  // Create a type alias for the Nodo structure using 'using'
+  using Node = Nodo*;
+
+public:
   Arbol() { this->Crear(); }
 
   ~Arbol() { this->Destruir(); }
@@ -177,10 +187,5 @@ private:
   }
 
 private:
-  struct Nodo {
-    char etiqueta;
-    Nodo *hijoIzq;
-    Nodo *hermanoDer;
-  };
   Nodo *raiz;
 };
