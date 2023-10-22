@@ -1,5 +1,7 @@
 #include "interfaz.hh"
 
-int main(){
-	return 0;
+int main() {
+  Interfaz interfaz;
+  interfaz.pruebas();
+  return 0;
 }

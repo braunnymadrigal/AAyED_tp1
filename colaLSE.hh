@@ -51,7 +51,7 @@ public:
     return e;
   }
 
-  char Frente() { return primero->elemento; }
+  T Frente() { return primero->elemento; }
 
 private:
   struct Caja {

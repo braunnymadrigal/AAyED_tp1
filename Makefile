@@ -1,7 +1,2 @@
-all: compilar ejecutar
-
-compilar:
+compile:
 	g++ main.cc interfaz.cc -o algoritmos
-	
-ejecutar:
-	./algoritmos

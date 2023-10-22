@@ -2,6 +2,12 @@
 
 class Arbol {
 public:
+  struct Nodo {
+    char etiqueta;
+    int padre;
+  };
+
+public:
   Arbol() { this->Iniciar(); }
 
   ~Arbol() { this->Destruir(); }
@@ -18,7 +24,7 @@ public:
     this->ultimo = -1;
   }
 
-  bool Arbol::Vacio() { return (raiz == -1); }
+  bool Vacio() { return raiz == -1; }
 
   void PonerRaiz(char etiqueta) {
     Nodo nuevoNodo;
@@ -119,14 +125,6 @@ public:
   }
 
 private:
-  struct Nodo {
-    char etiqueta;
-    int padre;
-  };
-  Nodo arbol[20];
-  int raiz;
-  int ultimo;
-  int tamArbol = 20;
   void abrirCampo(int i) {
     int nodoAux = this->ultimo + 1;
     while (nodoAux > i) {
@@ -141,4 +139,10 @@ private:
       ++i;
     }
   }
+
+private:
+  Nodo arbol[20];
+  int raiz;
+  int ultimo;
+  int tamArbol = 20;
 };

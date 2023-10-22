@@ -152,15 +152,6 @@ public:
   }
 
 private:
-  struct Nodo {
-    char etiqueta;
-    bool ultHijo;
-    Nodo *hmi;
-    Nodo *hd;
-  };
-
-  Nodo *raiz;
-
   void VaciarR(Nodo *nodoA, Nodo *nodoP) {
     if (nodoA != nullptr) {
       VaciarR(nodoA->hmi, nodoA);
@@ -206,4 +197,14 @@ private:
       }
     }
   }
+
+private:
+  struct Nodo {
+    char etiqueta;
+    bool ultHijo;
+    Nodo *hmi;
+    Nodo *hd;
+  };
+
+  Nodo *raiz;
 };

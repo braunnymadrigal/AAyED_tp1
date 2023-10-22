@@ -2,6 +2,20 @@
 
 class Arbol {
 public:
+  struct SubLista;
+
+  struct Nodo {
+    char etiqueta;
+    Nodo *abajo;
+    SubLista *sublista;
+  };
+
+  struct SubLista {
+    SubLista *siguiente;
+    Nodo *nodoOrg;
+  };
+
+public:
   Arbol() { Iniciar(); }
 
   ~Arbol() { Destruir(); }
@@ -200,18 +214,5 @@ public:
   }
 
 private:
-  struct SubLista;
-
-  struct Nodo {
-    char etiqueta;
-    Nodo *abajo;
-    SubLista *sublista;
-  };
-
-  struct SubLista {
-    SubLista *siguiente;
-    Nodo *nodoOrg;
-  };
-
   Nodo *raiz;
 };

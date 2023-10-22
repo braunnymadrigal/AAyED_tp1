@@ -123,13 +123,6 @@ public:
   }
 
 private:
-  struct Nodo {
-    char etiqueta;
-    Nodo *hijoIzq;
-    Nodo *hermanoDer;
-  };
-  Nodo *raiz;
-
   void VaciarPostOrden(Nodo *nodo) {
     if (nodo != nullptr) {
       VaciarPostOrden(nodo->hijoIzq);
@@ -182,4 +175,12 @@ private:
       }
     }
   }
+
+private:
+  struct Nodo {
+    char etiqueta;
+    Nodo *hijoIzq;
+    Nodo *hermanoDer;
+  };
+  Nodo *raiz;
 };
