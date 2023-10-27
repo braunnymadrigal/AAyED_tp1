@@ -6,7 +6,7 @@ class Interfaz {
 public:
   void pruebas();
   void probarOps(Arbol *&arbol);
-  // void probarAlg(Arbol*& arbol);
+  void probarAlg(Arbol *&arbol);
   void mostrarOperadoresArbol();
   void bienvenida();
   int getOpcion();

@@ -9,6 +9,8 @@ public:
 
   // Create a type alias for the Nodo structure using 'using'
   using Node = int;
+  // Define NodoNulo as an specific value accordingly to the data structure
+  const int NodoNulo = -1;
 
 public:
   Arbol() { this->Iniciar(); }

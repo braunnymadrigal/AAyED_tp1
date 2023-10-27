@@ -9,7 +9,9 @@ public:
   };
 
   // Create a type alias for the Nodo structure using 'using'
-  using Node = Nodo*;
+  using Node = Nodo *;
+  // Define NodoNulo as an specific value accordingly to the data structure
+  const void* NodoNulo = nullptr;
 
 public:
   Arbol() { this->Crear(); }
