@@ -164,15 +164,6 @@ void Interfaz::probarOps(Arbol *&arbol) {
       std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿De cúal "
                    "nodo quieres saber el hermano derecho?: ";
       std::cin >> etiqueta1;
-      /*
-      try {
-        std::cout << "El hermano derecho del nodo " << etiqueta1 << " es: "
-                  << arbol->Etiqueta(
-                         arbol->HermanoDer(arbol->getNodo(etiqueta1)));
-      } catch (const std::invalid_argument &e) {
-
-      } catch (const std::exception &e) {
-      }*/
 	  std::cout << "El hermano derecho del nodo " << etiqueta1 << " es: ";
 	  if(arbol->HermanoDer(arbol->getNodo(etiqueta1)) == arbol->NodoNulo) {
 	  	std::cout << "nodo nulo";
