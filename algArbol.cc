@@ -65,6 +65,7 @@ bool Algoritmos::EtiqRepetidas(Arbol *A) {
 	return repetidas;
 }
 
+
 int Algoritmos::AlturaNodoPreOrden(Arbol *A, Arbol::Node n) {
 	int altura = 0;
 	AlturaNodoPreOrdenR(A, n, altura, 0);
@@ -88,73 +89,83 @@ void Algoritmos::AlturaNodoPreOrdenR(Arbol *A, Arbol::Node n, int &altura, int k
 
 int Algoritmos::ProfundidadNodo(Arbol *A, Arbol::Node nU) {
 	int profundidad = 0;
-	if(A->Raiz() != nU) {
-		ProfundidadNodoR(A, A->Raiz(), nU, profundidad, 0);
+	Arbol::Node n = A->Padre(nU);
+	while( n != A->NodoNulo ) {
+		++profundidad;
+		n = A->Padre(n);
 	}
 	return profundidad;
 }
 
-void Algoritmos::ProfundidadNodoR(Arbol *A, Arbol::Node n, Arbol::Node nU, int &profundidad, int k) {
-	if(n == nU) {
-		profundidad = k;
-	} else {
-		n = A->HijoMasIzq(n);
-		++k;
-		while(n != A->NodoNulo) {
-			ProfundidadNodoR(A, n, nU, profundidad, k);
-			n = A->HermanoDer(n);
-		}
-	}
-}
-
-int Algoritmos::CantNivelesPreOrden(Arbol *A) {
+int Algoritmos::CantNivelesPreOrden(Arbol *A){
 	int niveles = 0;
-	if(!A->Vacio()) {
-		CantNivelesPreOrdenR(A, A->Raiz(), niveles, 1);
+	if( !A->Vacio()){
+		niveles = CantNivelesPreOrdenR(A, A->Raiz());
 	}
 	return niveles;
 }
 
-void Algoritmos::CantNivelesPreOrdenR(Arbol *A, Arbol::Node n, int &niveles, int k) {
-	if(A->HijoMasIzq(n) == A->NodoNulo) {
-		if(k > niveles) {
-			niveles = k;
+int Algoritmos::CantNivelesPreOrdenR(Arbol *A, Arbol::Node n) {
+	Arbol::Node nh = A->HijoMasIzq(n);
+	int niveles = 0;
+	while( nh != A->NodoNulo ){
+		int nivelesNH = CantNivelesPreOrdenR(A, nh);
+		if( niveles < nivelesNH ) {
+			niveles = nivelesNH;
 		}
-	} else {
-		n = A->HijoMasIzq(n);
-		++k;
-		while(n != A->NodoNulo) {
-			CantNivelesPreOrdenR(A, n, niveles, k);
-			n = A->HermanoDer(n);
-		}
+		nh = A->HermanoDer( nh );
 	}
+	return niveles + 1;
 }
+
 
 int Algoritmos::CantNivelesPorNiveles(Arbol *A) {
 	int niveles = 0;
+	int k = 0;
 	if(!A->Vacio()) {
-		int k = 1;
-		Cola<Arbol::Node> *C = new Cola<Arbol::Node>();
-		C->Encolar(A->Raiz());
+		k = 1;
+		std::vector<std::pair<Arbol::Node, int>> *L = new std::vector<std::pair<Arbol::Node, int>>;
+		L->push_back(std::make_pair(A->Raiz(), k));
+		int u = 0;
+		int p = 0;
 		Arbol::Node n;
 		Arbol::Node nh;
-		while(!C->Vacio()) {
-			n = C->Desencolar();
+		int tamLista;
+		int i;
+		int nivPadre;
+		Arbol::Node nPadre;
+		bool encontrado;
+		while(u != (p-1) ) {
+			n = (*L)[p].first;
+			++p;
 			nh = A->HijoMasIzq(n);
-			if(nh == A->NodoNulo) {
-				if( k > niveles) { //creo que este if es innecesario, comprobable en debugger
-					niveles = k;
-				}
-			} else {
+			if(nh != A->NodoNulo) {
 				++k;
-				while(nh != A->NodoNulo) {
-					C->Encolar(nh);
-					nh = A->HermanoDer(nh);
+			}
+			while(nh != A->NodoNulo) {
+				i = 0;
+				tamLista = L->size();
+				encontrado = false;
+				nPadre = A->Padre(nh);
+				while(i < tamLista && !encontrado) {
+					if(nPadre == (*L)[i].first) {
+						encontrado = true;
+						nivPadre = (*L)[i].second;
+					} else {
+						++i;
+					}
 				}
+				if(k-nivPadre != 1) {
+					--k;
+				}
+				L->push_back(std::make_pair(nh, k));
+				++u;
+				nh = A->HermanoDer(nh);
 			}
 		}
-		delete C;
+		delete L;
 	}
+	niveles = k;
 	return niveles;
 }
 
