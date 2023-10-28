@@ -8,6 +8,7 @@ public:
   void probarOps(Arbol *&arbol);
   void probarAlg(Arbol *&arbol);
   void mostrarOperadoresArbol();
+  void mostrarAlgoritmosArbol();
   void bienvenida();
   int getOpcion();
   void mostrarManual();

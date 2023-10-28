@@ -33,13 +33,16 @@ void Interfaz::probarOps(Arbol *&arbol) {
   char etiqueta1 = ' ';
   char etiqueta2 = ' ';
   int enteroAux = 0;
-  delete arbol;
   while (opcion != 0) {
     this->mostrarOperadoresArbol();
     opcion = this->getOpcion();
     Arbol::Node nodoActual;
     switch (opcion) {
     case 1:
+      if(arbol != nullptr) {
+      	delete arbol;
+      	arbol = nullptr;
+      }
       arbol = new Arbol;
       std::cout << "Arbol creado... :)" << std::endl
                 << "Ya podemos empezar" << std::endl;
@@ -48,6 +51,7 @@ void Interfaz::probarOps(Arbol *&arbol) {
 
     case 2:
       delete arbol;
+      arbol = nullptr;
       std::cout << "Arbol eliminado... :(" << std::endl
                 << "Recuerda que no puedes trabajar con un arbol destruido, te "
                    "recomendamos que crees uno :)"
@@ -214,6 +218,24 @@ void Interfaz::mostrarOperadoresArbol() {
             << "\t14. Numero de Hijos.\n";
 }
 
+void Interfaz::mostrarAlgoritmosArbol() {
+  std::cout << "ALGORITMOS PARA EL ARBOL:\n"
+            << "\t0. Salir.\n"
+            << "\t1. Hermano Izquierdo.\n"
+            << "\t2. Etiquetas Repetidas.\n"
+            << "\t3. Altura Nodo.\n"
+            << "\t4. Profundidad Nodo.\n"
+            << "\t5. Niveles PreOrden.\n"
+            << "\t6. Niveles PorNiveles.\n"
+            << "\t7. Listar Iesimo Nivel.\n"
+            << "\t8. Listar PreOrden.\n"
+            << "\t9. Listar PorNiveles.\n"
+            << "\t10. Buscar Etiqueta.\n"
+            << "\t11. Borrar SubArbol.\n"
+            << "\t12. Listar Hijos de Nodo.\n";
+}
+
+
 void Interfaz::bienvenida() {
   system("clear");
   std::cout
@@ -360,4 +382,92 @@ void Interfaz::mostrarManual() {
   system("clear");
 }
 
-void Interfaz::probarAlg(Arbol *&arbol) {}
+void Interfaz::probarAlg(Arbol *&arbol) {
+  Algoritmos algs;
+  int opcion = -1;
+  char etiqueta1 = ' ';
+  int enteroAux = 0;
+  while (opcion != 0) {
+    this->mostrarAlgoritmosArbol();
+    opcion = this->getOpcion();
+    Arbol::Node nodoActual;
+    switch (opcion) {
+    case 1:
+      std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿De cúal nodo quieres saber su hermano izquierdo?: ";
+      std::cin >> etiqueta1;
+      nodoActual = algs.HermanoIzq(arbol, arbol->getNodo(etiqueta1));
+      std::cout << "El hermano izquierdo del nodo " << etiqueta1 << " es: ";
+	  if(nodoActual != arbol->NodoNulo) {
+        std::cout << arbol->Etiqueta(nodoActual);
+      } else {
+        std::cout << "nodo nulo";
+      }
+      break;
+
+    case 2:
+      if(algs.EtiqRepetidas(arbol)) {
+      	std::cout << "El arbol tiene etiquetas repetidas" << std::endl;
+	  } else {
+	  	std::cout << "El arbol NO tiene etiquetas repetidas" << std::endl;
+	  }
+      break;
+
+    case 3:
+      std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿De cúal nodo quieres saber su altura?: ";
+      std::cin >> etiqueta1;
+      std::cout << "La altura del nodo " << etiqueta1 << " es: " << algs.AlturaNodoPreOrden(arbol, arbol->getNodo(etiqueta1));
+      break;
+
+    case 4:
+      std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿De cúal nodo quieres saber su profundidad?: ";
+      std::cin >> etiqueta1;
+      std::cout << "La profundidad del nodo " << etiqueta1 << " es: " << algs.ProfundidadNodo(arbol, arbol->getNodo(etiqueta1));
+      break;
+
+    case 5:
+      std::cout << "La cantidad de niveles del arbol por PREORDEN es: " << algs.CantNivelesPreOrden(arbol);      
+      break;
+
+    case 6:
+      std::cout << "La cantidad de niveles del arbol por PORNIVELES es: " << algs.CantNivelesPorNiveles(arbol);      
+      break;
+
+    case 7:
+      std::cout << "Digita el nivel del arbol que deseas que sea listado: ";
+      std::cin >> enteroAux;
+      algs.ListarIesimoNivel(arbol, enteroAux);      
+      break;
+
+    case 8:
+      algs.ListarPreOrden(arbol);
+      break;
+
+    case 9:
+      algs.ListarPorNiveles(arbol);
+      break;
+
+    case 10:
+      std::cout << "Digite la etiqueta que quiere buscar: ";
+      std::cin >> etiqueta1;
+      std::cout << "El nodo asociado es (direccion de memoria si su Estructura esta en memoria dinamica o un entero en caso contrario)" << algs.BuscarEtiq(arbol, etiqueta1);     
+      break;
+
+    case 11:
+      std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿Cual nodo quieres tomar como raiz para iniciar el borrado del subarbol?: ";
+      std::cin >> etiqueta1;
+      algs.BorrarSubArbol(arbol, arbol->getNodo(etiqueta1));
+      std::cout << "SUBARBOL BORRADO";
+      break;
+
+    case 12:
+      std::cout << "*Recuerda que el nodo debe estar en el arbol*\n¿De cual nodo quieres listar sus hijos?: ";
+      std::cin >> etiqueta1;
+      algs.ListarHijos(arbol, arbol->getNodo(etiqueta1));
+      break;
+    }
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+    system("clear");
+  }
+}
+

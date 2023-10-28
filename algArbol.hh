@@ -2,10 +2,12 @@
 
 #include <iostream>
 #include <limits>
+#include <vector>
+#include <utility>
 
 #include "colaLSE.hh"
-//#include "arbolASP.hh"
-#include "arbolLSE.hh"
+#include "arbolASP.hh"
+//#include "arbolLSE.hh"
 //#include "arbolHMIHD.hh"
 //#include "arbolHMIHD2.hh"
 
@@ -17,7 +19,7 @@ public:
 
   int AlturaNodoPreOrden(Arbol *A, Arbol::Node n);
 
-  int ProfundidadNodo(Arbol *A, Arbol::Node n);
+  int ProfundidadNodo(Arbol *A, Arbol::Node nU);
 
   int CantNivelesPreOrden(Arbol *A);
 
@@ -34,4 +36,15 @@ public:
   void BorrarSubArbol(Arbol *&A, Arbol::Node n);
 
   void ListarHijos(Arbol *A, Arbol::Node n);
+
+private:
+  void AlturaNodoPreOrdenR(Arbol *A, Arbol::Node n, int &altura, int k);
+  
+  int CantNivelesPreOrdenR(Arbol *A, Arbol::Node n);
+  
+  void ListarIesimoNivelR(Arbol *A, Arbol::Node n, int i, int nivAct);
+  
+  void ListarPreOrdenR(Arbol *A, Arbol::Node n);
+  
+  void BorrarSubArbolR(Arbol *&A, Arbol::Node nh);
 };
