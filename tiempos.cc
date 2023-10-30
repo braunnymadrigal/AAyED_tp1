@@ -139,7 +139,8 @@ void Tiempos::Ejecutar() {
 		 * etc
 		*/
 	
-	
+	//Algoritmos alg;
+	//alg.ListarPreOrden(arbolBL);
 
 ////////	
 	delete arbolBXS;
@@ -176,8 +177,66 @@ void Tiempos::Ejecutar() {
 	delete nodosPXL;
 }
 
-void Tiempos::CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {}
-void Tiempos::CrearArbolUltraAncho(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {}
-void Tiempos::CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {} 
+void Tiempos::CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {
+    std::mt19937 rng(std::time(0));
+    const std::string characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    std::uniform_int_distribution<std::size_t> distribution(0, characterSet.size() - 1);
+    char randomChar = characterSet[distribution(rng)];
+	// generador de randoms listo
+	A->PonerRaiz(randomChar);
+	vecNodes->push_back(A->getNodo(randomChar));
+	int posicion;
+	int numHijos;
+	// seteo inicial listo
+	for (int i = 0; i < n-1; ++i) {
+		if(vecNodes->size() <= n) {
+			randomChar = characterSet[distribution(rng)];
+			posicion = 1;
+			numHijos = A->NumHijos( (*vecNodes)[i] );
+			if(numHijos == 1) {
+				++posicion;
+			} else if (numHijos == 2) {
+				++i;
+			} 
+			vecNodes->push_back( A->AgregarHijo( (*vecNodes)[i], randomChar, posicion ) );
+			
+		} else {
+			i = n;
+		}
+	}
+}
 
-void Tiempos::TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {}
+void Tiempos::CrearArbolUltraAncho(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {
+    std::mt19937 rng(std::time(0));
+    const std::string characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    std::uniform_int_distribution<std::size_t> distribution(0, characterSet.size() - 1);
+    char randomChar = characterSet[distribution(rng)];
+	//generador de randoms listo
+	A->PonerRaiz(randomChar);
+	Arbol::Node nodoRaiz = A->getNodo(randomChar);
+	vecNodes->push_back(nodoRaiz);
+	//seteo inicial listo
+	for(int i = 1; i < n; ++i) {
+		randomChar = characterSet[distribution(rng)];
+		vecNodes->push_back( A->AgregarHijo(nodoRaiz, randomChar, i) );
+	}
+}
+
+void Tiempos::CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n) {
+    std::mt19937 rng(std::time(0));
+    const std::string characterSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    std::uniform_int_distribution<std::size_t> distribution(0, characterSet.size() - 1);
+    char randomChar = characterSet[distribution(rng)];
+	//generador de randoms listo
+	A->PonerRaiz(randomChar);
+	vecNodes->push_back(A->getNodo(randomChar));
+	//seteo inicial listo
+	for(int i = 0; i < n-1; ++i) {
+		randomChar = characterSet[distribution(rng)];
+		vecNodes->push_back( A->AgregarHijo( (*vecNodes)[i], randomChar, 1 ) );
+	}
+} 
+
+void Tiempos::TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
+		
+}
