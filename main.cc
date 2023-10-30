@@ -4,7 +4,7 @@
 int main() {
   //Interfaz interfaz;
   //interfaz.pruebas();
-  //Tiempos tiempos;
-  //tiempos.Ejecutar();
+  Tiempos tiempos;
+  tiempos.Ejecutar();
   return 0;
 }

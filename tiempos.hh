@@ -4,13 +4,17 @@
 class Tiempos {
 public:
 
-void Ejecutar(); //este metodo debe imprimir los tiempos
+void Ejecutar(); //este imprime PEOR Y PROM tiempo
+//NO TIENE SENTIDO SACAR MEJOR TIEMPO
 void CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);
 void CrearArbolUltraAncho(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);  
 void CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n); 
-double* TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
-double* TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
-double* TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
-//double* TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes); //si no ocupa los nodos obviamente no pase el vector como param
-//double* TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
+
+//importante : los metodos test imprimen el peor y prom tiempo adentro del propio metodo
+
+void TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
+//void TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
+//void TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
+//void TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes); 
+//void TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
 };
