@@ -1,5 +1,7 @@
 #include "algArbol.hh"
 #include <chrono>
+#include <random>
+#include <ctime>
 
 class Tiempos {
 public:
