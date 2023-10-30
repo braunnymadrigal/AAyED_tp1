@@ -6,7 +6,7 @@ public:
 
 void Ejecutar(); //este metodo debe imprimir los tiempos
 void CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);
-void CrearArbolUltraAlto(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);  
+void CrearArbolUltraAncho(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);  
 void CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n); 
 double* TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
 double* TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
