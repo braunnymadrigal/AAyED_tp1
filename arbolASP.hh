@@ -41,7 +41,7 @@ public:
     this->ultimo = 0;
   }
 
-  Nodo AgregarHijo(int nodoPadre, char etiqueta, int lugarDelHijo) {
+  int AgregarHijo(int nodoPadre, char etiqueta, int lugarDelHijo) {
     int cantHijos = 0;
     int i = nodoPadre + 1;
     while ((cantHijos + 1) != lugarDelHijo && i <= this->tamArbol) {
@@ -56,7 +56,8 @@ public:
     nuevoNodo.padre = nodoPadre;
     arbol[i] = nuevoNodo;
     ++this->ultimo;
-    return nuevoNodo;
+    //return nuevoNodo;
+    return i; //no tiene sentido enviarle un struct, cuando ya definio que tipo nodo es un int
   }
 
   void BorrarHoja(int nodo) {

@@ -4,7 +4,7 @@
 class Tiempos {
 public:
 
-void Ejecutar();
+void Ejecutar(); //este metodo debe imprimir los tiempos
 void CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);
 void CrearArbolUltraAlto(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n);  
 void CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int n); 
