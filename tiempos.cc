@@ -55,25 +55,25 @@ void Tiempos::Ejecutar() {
 		
 	
 	//hacerlos Balanceados
-	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 100);
-	CrearArbolSemiBalanceado(arbolBS, nodosBS, 1000);
-	CrearArbolSemiBalanceado(arbolBM, nodosBM, 10000);	
-	CrearArbolSemiBalanceado(arbolBL, nodosBL, 100000);
-	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 1000000);
+	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 50);
+	CrearArbolSemiBalanceado(arbolBS, nodosBS, 100);
+	CrearArbolSemiBalanceado(arbolBM, nodosBM, 500);	
+	CrearArbolSemiBalanceado(arbolBL, nodosBL, 1000);
+	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 2500);
 	
 	//hacerlos Anchos
-	CrearArbolUltraAncho(arbolAXS, nodosAXS, 100);
-	CrearArbolUltraAncho(arbolAS, nodosAS, 1000);
-	CrearArbolUltraAncho(arbolAM, nodosAM, 10000);	
-	CrearArbolUltraAncho(arbolAL, nodosAL, 100000);
-	CrearArbolUltraAncho(arbolAXL, nodosAXL, 1000000);
+	CrearArbolUltraAncho(arbolAXS, nodosAXS, 50);
+	CrearArbolUltraAncho(arbolAS, nodosAS, 100);
+	CrearArbolUltraAncho(arbolAM, nodosAM, 500);	
+	CrearArbolUltraAncho(arbolAL, nodosAL, 1000);
+	CrearArbolUltraAncho(arbolAXL, nodosAXL, 2500);
 
 	//hacerlos Profundos
-	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 100);
-	CrearArbolUltraProfundo(arbolPS, nodosPS, 1000);
-	CrearArbolUltraProfundo(arbolPM, nodosPM, 10000);	
-	CrearArbolUltraProfundo(arbolPL, nodosPL, 100000);
-	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 1000000);
+	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 50);
+	CrearArbolUltraProfundo(arbolPS, nodosPS, 100);
+	CrearArbolUltraProfundo(arbolPM, nodosPM, 500);	
+	CrearArbolUltraProfundo(arbolPL, nodosPL, 1000);
+	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 2500);
 	
 	// TIEMPOS
 	// ALG 1 
@@ -134,13 +134,119 @@ void Tiempos::Ejecutar() {
 	
 	
 	//ALG 2
-		/* etc
-		 * etc
-		 * etc
-		*/
+	std::cout << "Algoritmo 2" << std::endl;
+	//	BALANCEADO 
+	std::cout << "\tBalanceado: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgHermIzqNodoN(arbolBXS, nodosBXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgHermIzqNodoN(arbolBS, nodosBS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgHermIzqNodoN(arbolBM, nodosBM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgHermIzqNodoN(arbolBL, nodosBL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgHermIzqNodoN(arbolBXL, nodosBXL);
+	std::cout << std::endl;
 	
-	//Algoritmos alg;
-	//alg.ListarPreOrden(arbolBL);
+	//	ANCHO
+	std::cout << "\tANCHO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgHermIzqNodoN(arbolAXS, nodosAXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgHermIzqNodoN(arbolAS, nodosAS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgHermIzqNodoN(arbolAM, nodosAM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgHermIzqNodoN(arbolAL, nodosAL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgHermIzqNodoN(arbolAXL, nodosAXL);
+	std::cout << std::endl;
+	
+	//	PROFUNDO
+	std::cout << "\tPROFUNDO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgHermIzqNodoN(arbolPXS, nodosPXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgHermIzqNodoN(arbolPS, nodosPS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgHermIzqNodoN(arbolPM, nodosPM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgHermIzqNodoN(arbolPL, nodosPL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgHermIzqNodoN(arbolPXL, nodosPXL);
+	std::cout << std::endl;
+	
+	
+	// ALG 3 
+	std::cout << "Algoritmo 3" << std::endl;
+	//	BALANCEADO 
+	std::cout << "\tBalanceado: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestOpPadreNodoN(arbolBXS, nodosBXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestOpPadreNodoN(arbolBS, nodosBS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestOpPadreNodoN(arbolBM, nodosBM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestOpPadreNodoN(arbolBL, nodosBL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestOpPadreNodoN(arbolBXL, nodosBXL);
+	std::cout << std::endl;
+	
+	//	ANCHO
+	std::cout << "\tANCHO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestOpPadreNodoN(arbolAXS, nodosAXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestOpPadreNodoN(arbolAS, nodosAS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestOpPadreNodoN(arbolAM, nodosAM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestOpPadreNodoN(arbolAL, nodosAL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestOpPadreNodoN(arbolAXL, nodosAXL);
+	std::cout << std::endl;
+	
+	//	PROFUNDO
+	std::cout << "\tPROFUNDO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestOpPadreNodoN(arbolPXS, nodosPXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestOpPadreNodoN(arbolPS, nodosPS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestOpPadreNodoN(arbolPM, nodosPM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestOpPadreNodoN(arbolPL, nodosPL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestOpPadreNodoN(arbolPXL, nodosPXL);
+	std::cout << std::endl;	
+	
+	
 
 ////////	
 	delete arbolBXS;
@@ -187,18 +293,19 @@ void Tiempos::CrearArbolSemiBalanceado(Arbol *&A, std::vector<Arbol::Node> *&vec
 	vecNodes->push_back(A->getNodo(randomChar));
 	int posicion;
 	int numHijos;
+	int j = 0;
 	// seteo inicial listo
 	for (int i = 0; i < n-1; ++i) {
 		if(vecNodes->size() <= n) {
 			randomChar = characterSet[distribution(rng)];
 			posicion = 1;
-			numHijos = A->NumHijos( (*vecNodes)[i] );
+			numHijos = A->NumHijos( (*vecNodes)[j] );
 			if(numHijos == 1) {
 				++posicion;
 			} else if (numHijos == 2) {
-				++i;
+				++j;
 			} 
-			vecNodes->push_back( A->AgregarHijo( (*vecNodes)[i], randomChar, posicion ) );
+			vecNodes->push_back( A->AgregarHijo( (*vecNodes)[j], randomChar, posicion ) );
 			
 		} else {
 			i = n;
@@ -238,5 +345,61 @@ void Tiempos::CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecN
 } 
 
 void Tiempos::TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
-		
+	Algoritmos alg;
+	int64_t peorTiempo = 0;
+	int64_t promTiempo = 0;
+	int vecSize = vecNodes->size();
+	for(int i = 0; i < vecSize; ++i) {
+		auto start = std::chrono::high_resolution_clock::now();
+		alg.ProfundidadNodo(A, (*vecNodes)[i]);
+		auto stop = std::chrono::high_resolution_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    	int64_t durationInMicroseconds = duration.count();
+    	promTiempo += durationInMicroseconds; 
+    	if(durationInMicroseconds > peorTiempo) {
+    		peorTiempo = durationInMicroseconds;
+    	}
+	}
+	promTiempo = promTiempo / vecSize;
+	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
 }
+
+void Tiempos::TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
+	Algoritmos alg;
+	int64_t peorTiempo = 0;
+	int64_t promTiempo = 0;
+	int vecSize = vecNodes->size();
+	for(int i = 0; i < vecSize; ++i) {
+		auto start = std::chrono::high_resolution_clock::now();
+		alg.HermanoIzq(A, (*vecNodes)[i]);
+		auto stop = std::chrono::high_resolution_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    	int64_t durationInMicroseconds = duration.count();
+    	promTiempo += durationInMicroseconds; 
+    	if(durationInMicroseconds > peorTiempo) {
+    		peorTiempo = durationInMicroseconds;
+    	}
+	}
+	promTiempo = promTiempo / vecSize;
+	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+}
+
+void Tiempos::TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
+	int64_t peorTiempo = 0;
+	int64_t promTiempo = 0;
+	int vecSize = vecNodes->size();
+	for(int i = 0; i < vecSize; ++i) {
+		auto start = std::chrono::high_resolution_clock::now();
+		A->Padre((*vecNodes)[i]);
+		auto stop = std::chrono::high_resolution_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    	int64_t durationInMicroseconds = duration.count();
+    	promTiempo += durationInMicroseconds; 
+    	if(durationInMicroseconds > peorTiempo) {
+    		peorTiempo = durationInMicroseconds;
+    	}
+	}
+	promTiempo = promTiempo / vecSize;
+	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+}
+
