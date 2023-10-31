@@ -55,25 +55,25 @@ void Tiempos::Ejecutar() {
 		
 	
 	//hacerlos Balanceados
-	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 100);
-	CrearArbolSemiBalanceado(arbolBS, nodosBS, 1000);
-	CrearArbolSemiBalanceado(arbolBM, nodosBM, 10000);	
-	CrearArbolSemiBalanceado(arbolBL, nodosBL, 100000);
-	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 1000000);
+	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 243);
+	CrearArbolSemiBalanceado(arbolBS, nodosBS, 729);
+	CrearArbolSemiBalanceado(arbolBM, nodosBM, 2187);	
+	CrearArbolSemiBalanceado(arbolBL, nodosBL, 6561);
+	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 19683);
 	
 	//hacerlos Anchos
-	CrearArbolUltraAncho(arbolAXS, nodosAXS, 100);
-	CrearArbolUltraAncho(arbolAS, nodosAS, 1000);
-	CrearArbolUltraAncho(arbolAM, nodosAM, 10000);	
-	CrearArbolUltraAncho(arbolAL, nodosAL, 100000);
-	CrearArbolUltraAncho(arbolAXL, nodosAXL, 1000000);
+	CrearArbolUltraAncho(arbolAXS, nodosAXS, 243);
+	CrearArbolUltraAncho(arbolAS, nodosAS, 729);
+	CrearArbolUltraAncho(arbolAM, nodosAM, 2187);	
+	CrearArbolUltraAncho(arbolAL, nodosAL, 6561);
+	CrearArbolUltraAncho(arbolAXL, nodosAXL, 19683);
 
 	//hacerlos Profundos
-	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 100);
-	CrearArbolUltraProfundo(arbolPS, nodosPS, 1000);
-	CrearArbolUltraProfundo(arbolPM, nodosPM, 10000);	
-	CrearArbolUltraProfundo(arbolPL, nodosPL, 100000);
-	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 1000000);
+	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 243);
+	CrearArbolUltraProfundo(arbolPS, nodosPS, 729);
+	CrearArbolUltraProfundo(arbolPM, nodosPM, 2187);	
+	CrearArbolUltraProfundo(arbolPL, nodosPL, 6561);
+	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 19683);
 	
 	// TIEMPOS
 	// ALG 1 -------------------------------
@@ -475,15 +475,15 @@ void Tiempos::TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
 		auto start = std::chrono::high_resolution_clock::now();
 		alg.ProfundidadNodo(A, (*vecNodes)[i]);
 		auto stop = std::chrono::high_resolution_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    	int64_t durationInMicroseconds = duration.count();
-    	promTiempo += durationInMicroseconds; 
-    	if(durationInMicroseconds > peorTiempo) {
-    		peorTiempo = durationInMicroseconds;
+		auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+    	int64_t durationInNanoseconds = duration.count();
+    	promTiempo += durationInNanoseconds; 
+    	if(durationInNanoseconds > peorTiempo) {
+    		peorTiempo = durationInNanoseconds;
     	}
 	}
 	promTiempo = promTiempo / vecSize;
-	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+	std::cout << "PEOR: " << std::left << std::setw(10) << peorTiempo << " PROM: " << std::left << std::setw(10) << promTiempo << "";
 }
 
 void Tiempos::TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
@@ -495,15 +495,15 @@ void Tiempos::TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes
 		auto start = std::chrono::high_resolution_clock::now();
 		alg.HermanoIzq(A, (*vecNodes)[i]);
 		auto stop = std::chrono::high_resolution_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    	int64_t durationInMicroseconds = duration.count();
-    	promTiempo += durationInMicroseconds; 
-    	if(durationInMicroseconds > peorTiempo) {
-    		peorTiempo = durationInMicroseconds;
+		auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+    	int64_t durationInNanoseconds = duration.count();
+    	promTiempo += durationInNanoseconds; 
+    	if(durationInNanoseconds > peorTiempo) {
+    		peorTiempo = durationInNanoseconds;
     	}
 	}
 	promTiempo = promTiempo / vecSize;
-	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+	std::cout << "PEOR: " << std::left << std::setw(10) << peorTiempo << " PROM: " << std::left << std::setw(10) << promTiempo << "";
 }
 
 void Tiempos::TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
@@ -514,15 +514,15 @@ void Tiempos::TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
 		auto start = std::chrono::high_resolution_clock::now();
 		A->Padre((*vecNodes)[i]);
 		auto stop = std::chrono::high_resolution_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    	int64_t durationInMicroseconds = duration.count();
-    	promTiempo += durationInMicroseconds; 
-    	if(durationInMicroseconds > peorTiempo) {
-    		peorTiempo = durationInMicroseconds;
+		auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+    	int64_t durationInNanoseconds = duration.count();
+    	promTiempo += durationInNanoseconds; 
+    	if(durationInNanoseconds > peorTiempo) {
+    		peorTiempo = durationInNanoseconds;
     	}
 	}
 	promTiempo = promTiempo / vecSize;
-	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+	std::cout << "PEOR: " << std::left << std::setw(10) << peorTiempo << " PROM: " << std::left << std::setw(10) << promTiempo << "";
 }
 
 void Tiempos::TestAlgAlturaNodoPO(Arbol *&A, std::vector<Arbol::Node> *&vecNodes){
@@ -535,16 +535,16 @@ void Tiempos::TestAlgAlturaNodoPO(Arbol *&A, std::vector<Arbol::Node> *&vecNodes
         auto start = std::chrono::high_resolution_clock::now();
         alg.AlturaNodoPreOrden(A, (*vecNodes)[i]);
         auto stop = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        int64_t durationInMicroseconds = duration.count();
-        promTiempo += durationInMicroseconds; 
-        if(durationInMicroseconds > peorTiempo) {
-            peorTiempo = durationInMicroseconds;
+        auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+        int64_t durationInNanoseconds = duration.count();
+        promTiempo += durationInNanoseconds; 
+        if(durationInNanoseconds > peorTiempo) {
+            peorTiempo = durationInNanoseconds;
         }
     }
 	
     promTiempo = promTiempo / vecSize;
-    std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;
+	std::cout << "PEOR: " << std::left << std::setw(10) << peorTiempo << " PROM: " << std::left << std::setw(10) << promTiempo << "";
 }
 
 void Tiempos::TestAlgListarHijos(Arbol *&A, std::vector<Arbol::Node> *&vecNodes){
@@ -558,11 +558,11 @@ void Tiempos::TestAlgListarHijos(Arbol *&A, std::vector<Arbol::Node> *&vecNodes)
         auto start = std::chrono::high_resolution_clock::now();
         alg.ListarHijos(A, (*vecNodes)[i]);
         auto stop = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        int64_t durationInMicroseconds = duration.count();
-        promTiempo += durationInMicroseconds; 
-        if(durationInMicroseconds > peorTiempo) {
-            peorTiempo = durationInMicroseconds;
+        auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+        int64_t durationInNanoseconds = duration.count();
+        promTiempo += durationInNanoseconds; 
+        if(durationInNanoseconds > peorTiempo) {
+            peorTiempo = durationInNanoseconds;
         }
     }
 	
@@ -570,6 +570,6 @@ void Tiempos::TestAlgListarHijos(Arbol *&A, std::vector<Arbol::Node> *&vecNodes)
 	//freopen("CON", "w", stdout); Para windows
 	
     promTiempo = promTiempo / vecSize;
-    std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;
+	std::cout << "PEOR: " << std::left << std::setw(10) << peorTiempo << " PROM: " << std::left << std::setw(10) << promTiempo << "";
 }
 
