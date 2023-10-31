@@ -55,31 +55,31 @@ void Tiempos::Ejecutar() {
 		
 	
 	//hacerlos Balanceados
-	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 50);
-	CrearArbolSemiBalanceado(arbolBS, nodosBS, 100);
-	CrearArbolSemiBalanceado(arbolBM, nodosBM, 500);	
-	CrearArbolSemiBalanceado(arbolBL, nodosBL, 1000);
-	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 2500);
+	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 100);
+	CrearArbolSemiBalanceado(arbolBS, nodosBS, 1000);
+	CrearArbolSemiBalanceado(arbolBM, nodosBM, 10000);	
+	CrearArbolSemiBalanceado(arbolBL, nodosBL, 100000);
+	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 1000000);
 	
 	//hacerlos Anchos
-	CrearArbolUltraAncho(arbolAXS, nodosAXS, 50);
-	CrearArbolUltraAncho(arbolAS, nodosAS, 100);
-	CrearArbolUltraAncho(arbolAM, nodosAM, 500);	
-	CrearArbolUltraAncho(arbolAL, nodosAL, 1000);
-	CrearArbolUltraAncho(arbolAXL, nodosAXL, 2500);
+	CrearArbolUltraAncho(arbolAXS, nodosAXS, 100);
+	CrearArbolUltraAncho(arbolAS, nodosAS, 1000);
+	CrearArbolUltraAncho(arbolAM, nodosAM, 10000);	
+	CrearArbolUltraAncho(arbolAL, nodosAL, 100000);
+	CrearArbolUltraAncho(arbolAXL, nodosAXL, 1000000);
 
 	//hacerlos Profundos
-	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 50);
-	CrearArbolUltraProfundo(arbolPS, nodosPS, 100);
-	CrearArbolUltraProfundo(arbolPM, nodosPM, 500);	
-	CrearArbolUltraProfundo(arbolPL, nodosPL, 1000);
-	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 2500);
+	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 100);
+	CrearArbolUltraProfundo(arbolPS, nodosPS, 1000);
+	CrearArbolUltraProfundo(arbolPM, nodosPM, 10000);	
+	CrearArbolUltraProfundo(arbolPL, nodosPL, 100000);
+	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 1000000);
 	
 	// TIEMPOS
 	// ALG 1 -------------------------------
 	std::cout << "ALGORITMO: PROFUNDIDAD NODO" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\tBALANCEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgProfNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -136,7 +136,7 @@ void Tiempos::Ejecutar() {
 	//ALG 2 ---------------------------------------
 	std::cout << "ALGORITMO: HERMANO IZQUIERDO" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\tBALANCEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgHermIzqNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -193,7 +193,7 @@ void Tiempos::Ejecutar() {
 	// ALG 3 ----------------------------------
 	std::cout << "OPERADOR BASICO: PADRE" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\tBALANCEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestOpPadreNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -251,7 +251,7 @@ void Tiempos::Ejecutar() {
 	//ALG 4-----------------------------------
 	std::cout << "ALGORITMO: ALTURA NODO PREORDEN" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\tBALANCEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgAlturaNodoPO(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -308,7 +308,7 @@ void Tiempos::Ejecutar() {
 	//ALG 5-----------------------------------------------------
 	std::cout << "ALGORITMO: LISTAR HIJOS" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\tBALANCEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgListarHijos(arbolBXS, nodosBXS);
 	std::cout << std::endl;

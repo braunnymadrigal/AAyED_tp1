@@ -147,8 +147,8 @@ private:
   }
 
 private:
-  Nodo arbol[20];
+  Nodo arbol[1000000];
   int raiz;
   int ultimo;
-  int tamArbol = 20;
+  int tamArbol = 1000000;
 };
