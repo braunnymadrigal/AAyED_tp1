@@ -1,32 +1,45 @@
 # TP1  AAyED UCR 2023 Manual de Usuario
+
 Estudiantes: Keylor Palacios C25770 / Braunny Madrigal C24436
 
 ## Proyecto GIT: https://github.com/braunnymadrigal/AAyED_tp1.git
 
 ## ¿Cómo compilar y correr?
-Abrir el archivo "algArbol.hh" y elegir la estructura del arbol con la que se desea ejecutar las pruebas, o sea se deben comentar las otras 3 estructuras de datos. Cuando este paso está listo se puede proceder a compilar de la siguiente forma:
-1. Abrir shell en el directorio principal del proyecto
-2. a Para compilar puede: ejecutar el comando de la siguiente manera "g++ main.cc interfaz.cc algArbol.cc -o algoritmos"
-2. b Para compilar puede: escribir make compile en la consola
-3. Ejecutar el comando ./algoritmos para correrlo
+1. Abrir el archivo "algArbol.hh" y elegir la estructura del árbol con la que se desea ejecutar las pruebas, se deben comentar las otras 3 estructuras de datos.
+2. Abrir el archivo “main.cc” y elegir si se quiere los operadores y algoritmos del árbol o hacer un análisis de tiempos. Basta con comentar aquello que no se desea usar y dejar sin comentar aquello que sí. Elegir entre objeto Tiempos u objeto Interfaz.
+3. Abrir shell en el directorio principal del proyecto
+4. a) Para compilar puede: ejecutar el comando de la siguiente manera "g++ main.cc interfaz.cc algArbol.cc tiempos.cc  -o algoritmos"
+4. b) Para compilar puede: escribir make compile en la consola
+5. Ejecutar el comando ./algoritmos para correrlo
 
 ## ¿Cómo se usa?
-Ejecuta el programa y a continuación se le presentará una interfaz diseñada completamente para ser utilizada en consola que le informara de como usar cada operador básico y algoritmos. El programa consiste de un menú principal que le permite 1) usar operadores básicos del árbol, 2)usar algoritmos del árbol, 3)ver manual, y 2 submenús que son aquellos que directamente le muestran cada operador o en su defecto cada algoritmo. Es importante recordar que el programa asume que el usuario leyó el manual y tiene entendido las especificaciones de cada operador y algoritmo. 
+1. Ejecuta el programa.
+2. Si se decide usar el objeto interfaz. El programa va a consistir de un menú principal que le permite manipular el árbol a través de sus usar operadores básicos del árbol y algoritmos. La propia interfaz le indica cómo moverse por los menús.
+3. Si se decide usar el objeto tiempos. El programa va a consistir de una simple salida en consola que le detalla todos los tiempos analizados con distintas especificaciones para la estructura de datos escogida anteriormente.
 
 ## ¿Qué funcionalidad implementa?
-Se implementa la funcionalidad de una interfaz capaz de generar menús intuitivos para el usuario. Son implementados todos los operadores básicos de cada estructura de datos del modelo árbol n-ario tal que si importa el orden entre los hijos de un nodo. Los algoritmos del árbol también son implementados en su totalidad. Una cola implementada como una estructura de lista simplemente enlazada de forma totalmente funcional, la cola está totalmente emplantillada y es utilizada como modelo auxiliar para ciertos algoritmos del árbol. 
+1. Se implementan el modelo Árbol n-ario tal que si importa el orden entre los hijos de un nodo por las estructuras de datos “Lista de Listas”, “Arreglo con Señalador al Padre”, “Hijo Más Izquierdo Hermano Derecho” y “Hijo Más Izquierdo Hermano Derecho tal que el hermano derecho del hijo más derecho es el padre”.
+2. Se implementa el modelo Cola por la estructura de datos “Lista Simplemente Enlazada”.
+3. Se implementan todos los algoritmos que se detallan el archivo pdf de documentación. Tales que los algoritmos funcionan independientemente de la estructura de datos a utilizar.
+4. Se implementa una interfaz que le permite manipular el modelo árbol a su antojo mediante el uso de menús simples. 
+5. Se implementa una clase tiempos que es capaz de construir árboles de forma automática y testearlos en distintos algoritmos. Es capaz de imprimir los tiempos que los árboles duran en ciertas pruebas específicas.
 
 ## ¿Que no fue implementado? 
 Todos los casos fueron implementados y contemplados.
 
 ## Errores Conocidos:
-Ninguno
+Ninguno.
 
 ## Arquitectura del programa: 
-Todas las estructuras están implementada en archivos .hh, osea “header files”, ya que esto permite que el código sea más reutilizable, se sigue el estándar que use la propia librería estándar de C++ para implementar estructuras de datos. Dicho estándar es útil si en un futuro queremos usar templates con las estructuras, seguir las convenciones permite implementar templates en un corto periodo de tiempo. La interfaz si está implementada con su source file y su header file por aparte, la interfaz consiste de métodos muy pequeños que sirven como simples generadores de texto que ayuden al usuario a operar la estructura sin necesidad de entender cómo las estructuras están implementadas. La interfaz es semi modular, en el archivo header podemos ver las firmas y es posible notar que es relativamente sencillo cambiar el que hace cada método, tal que si se quiere probar una parte del programa u otra. Los algoritmos del árbol al igual que la interfaz están implementados con un archivo exclusivo para sus firmas y otro para la implementación de tales algoritmos, dichos algoritmos no dependen de ninguna estructura de datos específica y son además fácilmente modificables a conveniencia del programador. El archivo main.cc solo se encarga de crear una instancia de la interfaz y llamarla. 
-
+1. Estructuras de datos implementadas enteramente en archivos .hh. Decisión tomada pensando en cómo las estructuras de datos en la librería estándar de C++ están implementadas. 
+2. Algoritmos del árbol implementados en dos archivos, uno .cc y otro .hh. En el .hh únicamente se encuentran las firmas de los métodos.
+3. Interfaz implementada en dos archivos, uno .cc y otro .hh. En el .hh únicamente se encuentran las firmas de los métodos. El archivo main.cc solo se encarga de crear una instancia de la interfaz y llamarla. 
+4. Tiempos de prueba implementada en dos archivos, uno .cc y otro .hh. En el .hh únicamente se encuentran las firmas de los métodos.
+5. Archivo main, implementado en único archivo main.cc.
+6. Archivo makefile que le permite compilar de forma sencilla. 
 
 ## Especificación de las funciones del programa:
-Navegar en menús.
-Usar operadores básicos a través de un menú (hace traducciones de etiqueta a nodo y viceversa)
-Usar algoritmos del árbol n-ario tal que si importa el orden entre los hijos de un nodo a través de un menú (hace traducciones de etiqueta a nodo y viceversa)
+1. Navegar en menús.
+2. Usar operadores básicos a través de un menú (hace traducciones de etiqueta a nodo y viceversa).
+3. Usar algoritmos del árbol n-ario tal que si importa el orden entre los hijos de un nodo a través de un menú (hace traducciones de etiqueta a nodo y viceversa).
+4. Ver la eficiencia en tiempo de una estructura de datos del modelo árbol en distintas pruebas. En cada prueba se muestra su rendimiento para distintos tamaños, tipos de árbol, dicho rendimiento es mostrado para caso promedio y peor.
