@@ -15,7 +15,7 @@ Estudiantes: Keylor Palacios C25770 / Braunny Madrigal C24436
 ## ¿Cómo se usa?
 1. Ejecuta el programa.
 2. Si se decide usar el objeto interfaz. El programa va a consistir de un menú principal que le permite manipular el árbol a través de sus usar operadores básicos del árbol y algoritmos. La propia interfaz le indica cómo moverse por los menús.
-3. Si se decide usar el objeto tiempos. El programa va a consistir de una simple salida en consola que le detalla todos los tiempos analizados con distintas especificaciones para la estructura de datos escogida anteriormente.
+3. Si se decide usar el objeto tiempos. El programa va a consistir de una simple salida en consola que le detalla todos los tiempos analizados con distintas especificaciones para la estructura de datos escogida anteriormente. En el archivo tiempos.cc, el el método encargado de testear el algoritmo “ListarHijos” que crea un archivo para la salida existe una línea de código que se encarga de cerrar el archivo utilizado pero esta línea depende del sistema operativo utilizado por lo que se debe comprobar que dicha línea esté de acuerdo a sus sistema; “freopen("/dev/tty", "w", stdout);” para linux y “freopen("CON", "w", stdout);” para windows.
 
 ## ¿Qué funcionalidad implementa?
 1. Se implementan el modelo Árbol n-ario tal que si importa el orden entre los hijos de un nodo por las estructuras de datos “Lista de Listas”, “Arreglo con Señalador al Padre”, “Hijo Más Izquierdo Hermano Derecho” y “Hijo Más Izquierdo Hermano Derecho tal que el hermano derecho del hijo más derecho es el padre”.
