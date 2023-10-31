@@ -76,10 +76,10 @@ void Tiempos::Ejecutar() {
 	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 2500);
 	
 	// TIEMPOS
-	// ALG 1 
-	std::cout << "Algoritmo 1" << std::endl;
+	// ALG 1 -------------------------------
+	std::cout << "ALGORITMO: PROFUNDIDAD NODO" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBalanceado: " << std::endl;
+	std::cout << "\tBALACEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgProfNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -133,10 +133,10 @@ void Tiempos::Ejecutar() {
 	std::cout << std::endl;
 	
 	
-	//ALG 2
-	std::cout << "Algoritmo 2" << std::endl;
+	//ALG 2 ---------------------------------------
+	std::cout << "ALGORITMO: HERMANO IZQUIERDO" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBalanceado: " << std::endl;
+	std::cout << "\tBALACEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestAlgHermIzqNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -190,10 +190,10 @@ void Tiempos::Ejecutar() {
 	std::cout << std::endl;
 	
 	
-	// ALG 3 
-	std::cout << "Algoritmo 3" << std::endl;
+	// ALG 3 ----------------------------------
+	std::cout << "OPERADOR BASICO: PADRE" << std::endl;
 	//	BALANCEADO 
-	std::cout << "\tBalanceado: " << std::endl;
+	std::cout << "\tBALACEADO: " << std::endl;
 	std::cout << "\t\tXS: ";
 	TestOpPadreNodoN(arbolBXS, nodosBXS);
 	std::cout << std::endl;
@@ -245,6 +245,121 @@ void Tiempos::Ejecutar() {
 	std::cout << "\t\tXL: ";
 	TestOpPadreNodoN(arbolPXL, nodosPXL);
 	std::cout << std::endl;	
+	
+	
+	
+	//ALG 4-----------------------------------
+	std::cout << "ALGORITMO: ALTURA NODO PREORDEN" << std::endl;
+	//	BALANCEADO 
+	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgAlturaNodoPO(arbolBXS, nodosBXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgAlturaNodoPO(arbolBS, nodosBS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgAlturaNodoPO(arbolBM, nodosBM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgAlturaNodoPO(arbolBL, nodosBL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgAlturaNodoPO(arbolBXL, nodosBXL);
+	std::cout << std::endl;
+	
+	//	ANCHO
+	std::cout << "\tANCHO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgAlturaNodoPO(arbolAXS, nodosAXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgAlturaNodoPO(arbolAS, nodosAS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgAlturaNodoPO(arbolAM, nodosAM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgAlturaNodoPO(arbolAL, nodosAL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgAlturaNodoPO(arbolAXL, nodosAXL);
+	std::cout << std::endl;
+	
+	//	PROFUNDO
+	std::cout << "\tPROFUNDO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgAlturaNodoPO(arbolPXS, nodosPXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgAlturaNodoPO(arbolPS, nodosPS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgAlturaNodoPO(arbolPM, nodosPM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgAlturaNodoPO(arbolPL, nodosPL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgAlturaNodoPO(arbolPXL, nodosPXL);
+	std::cout << std::endl;
+	
+	
+	//ALG 5-----------------------------------------------------
+	std::cout << "ALGORITMO: LISTAR HIJOS" << std::endl;
+	//	BALANCEADO 
+	std::cout << "\tBALACEADO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgListarHijos(arbolBXS, nodosBXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgListarHijos(arbolBS, nodosBS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgListarHijos(arbolBM, nodosBM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgListarHijos(arbolBL, nodosBL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgListarHijos(arbolBXL, nodosBXL);
+	std::cout << std::endl;
+	
+	//	ANCHO
+	std::cout << "\tANCHO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgListarHijos(arbolAXS, nodosAXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgListarHijos(arbolAS, nodosAS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgListarHijos(arbolAM, nodosAM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgListarHijos(arbolAL, nodosAL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgListarHijos(arbolAXL, nodosAXL);
+	std::cout << std::endl;
+	
+	//	PROFUNDO
+	std::cout << "\tPROFUNDO: " << std::endl;
+	std::cout << "\t\tXS: ";
+	TestAlgListarHijos(arbolPXS, nodosPXS);
+	std::cout << std::endl;
+	std::cout << "\t\tS: ";
+	TestAlgListarHijos(arbolPS, nodosPS);
+	std::cout << std::endl;
+	std::cout << "\t\tM: ";
+	TestAlgListarHijos(arbolPM, nodosPM);
+	std::cout << std::endl;
+	std::cout << "\t\tL: ";
+	TestAlgListarHijos(arbolPL, nodosPL);
+	std::cout << std::endl;
+	std::cout << "\t\tXL: ";
+	TestAlgListarHijos(arbolPXL, nodosPXL);
+	std::cout << std::endl;
 	
 	
 
@@ -344,6 +459,13 @@ void Tiempos::CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecN
 	}
 } 
 
+
+/*
+------------------------
+TEST DE LOS ALGORITMOS
+------------------------
+*/
+
 void Tiempos::TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
 	Algoritmos alg;
 	int64_t peorTiempo = 0;
@@ -401,5 +523,53 @@ void Tiempos::TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes) {
 	}
 	promTiempo = promTiempo / vecSize;
 	std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;		
+}
+
+void Tiempos::TestAlgAlturaNodoPO(Arbol *&A, std::vector<Arbol::Node> *&vecNodes){
+    Algoritmos alg;
+    int64_t peorTiempo = 0;
+    int64_t promTiempo = 0;
+    int vecSize = vecNodes->size();
+	
+    for(int i = 0; i < vecSize; ++i) {
+        auto start = std::chrono::high_resolution_clock::now();
+        alg.AlturaNodoPreOrden(A, (*vecNodes)[i]);
+        auto stop = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        int64_t durationInMicroseconds = duration.count();
+        promTiempo += durationInMicroseconds; 
+        if(durationInMicroseconds > peorTiempo) {
+            peorTiempo = durationInMicroseconds;
+        }
+    }
+	
+    promTiempo = promTiempo / vecSize;
+    std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;
+}
+
+void Tiempos::TestAlgListarHijos(Arbol *&A, std::vector<Arbol::Node> *&vecNodes){
+	Algoritmos alg;
+    int64_t peorTiempo = 0;
+    int64_t promTiempo = 0;
+    int vecSize = vecNodes->size();
+	freopen("salida.txt", "w", stdout);
+	
+    for(int i = 0; i < vecSize; ++i) {
+        auto start = std::chrono::high_resolution_clock::now();
+        alg.ListarHijos(A, (*vecNodes)[i]);
+        auto stop = std::chrono::high_resolution_clock::now();
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        int64_t durationInMicroseconds = duration.count();
+        promTiempo += durationInMicroseconds; 
+        if(durationInMicroseconds > peorTiempo) {
+            peorTiempo = durationInMicroseconds;
+        }
+    }
+	
+	freopen("/dev/tty", "w", stdout); //Para Linux
+	//freopen("CON", "w", stdout); Para windows
+	
+    promTiempo = promTiempo / vecSize;
+    std::cout << "PEOR: " << peorTiempo << "\tPROM: " << promTiempo;
 }
 

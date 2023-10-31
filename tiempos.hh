@@ -14,6 +14,6 @@ void CrearArbolUltraProfundo(Arbol *&A, std::vector<Arbol::Node> *&vecNodes, int
 void TestAlgProfNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
 void TestAlgHermIzqNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
 void TestOpPadreNodoN(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
-//void TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes); 
-//void TestAlgRandomAlg(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
+void TestAlgAlturaNodoPO(Arbol *&A, std::vector<Arbol::Node> *&vecNodes); 
+void TestAlgListarHijos(Arbol *&A, std::vector<Arbol::Node> *&vecNodes);
 };
