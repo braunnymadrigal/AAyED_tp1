@@ -6,9 +6,9 @@
 #include <utility>
 
 #include "colaLSE.hh"
-#include "arbolASP.hh"
+//#include "arbolASP.hh"
 //#include "arbolLSE.hh"
-//#include "arbolHMIHD.hh"
+#include "arbolHMIHD.hh"
 //#include "arbolHMIHD2.hh"
 
 class Algoritmos {

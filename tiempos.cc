@@ -55,25 +55,25 @@ void Tiempos::Ejecutar() {
 		
 	
 	//hacerlos Balanceados
-	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 243);
-	CrearArbolSemiBalanceado(arbolBS, nodosBS, 729);
-	CrearArbolSemiBalanceado(arbolBM, nodosBM, 2187);	
-	CrearArbolSemiBalanceado(arbolBL, nodosBL, 6561);
-	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 19683);
+	CrearArbolSemiBalanceado(arbolBXS, nodosBXS, 10);
+	CrearArbolSemiBalanceado(arbolBS, nodosBS, 25);
+	CrearArbolSemiBalanceado(arbolBM, nodosBM, 100);	
+	CrearArbolSemiBalanceado(arbolBL, nodosBL, 250);
+	CrearArbolSemiBalanceado(arbolBXL, nodosBXL, 500);
 	
 	//hacerlos Anchos
-	CrearArbolUltraAncho(arbolAXS, nodosAXS, 243);
-	CrearArbolUltraAncho(arbolAS, nodosAS, 729);
-	CrearArbolUltraAncho(arbolAM, nodosAM, 2187);	
-	CrearArbolUltraAncho(arbolAL, nodosAL, 6561);
-	CrearArbolUltraAncho(arbolAXL, nodosAXL, 19683);
+	CrearArbolUltraAncho(arbolAXS, nodosAXS, 10);
+	CrearArbolUltraAncho(arbolAS, nodosAS, 25);
+	CrearArbolUltraAncho(arbolAM, nodosAM, 100);	
+	CrearArbolUltraAncho(arbolAL, nodosAL, 250);
+	CrearArbolUltraAncho(arbolAXL, nodosAXL, 500);
 
 	//hacerlos Profundos
-	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 243);
-	CrearArbolUltraProfundo(arbolPS, nodosPS, 729);
-	CrearArbolUltraProfundo(arbolPM, nodosPM, 2187);	
-	CrearArbolUltraProfundo(arbolPL, nodosPL, 6561);
-	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 19683);
+	CrearArbolUltraProfundo(arbolPXS, nodosPXS, 10);
+	CrearArbolUltraProfundo(arbolPS, nodosPS, 25);
+	CrearArbolUltraProfundo(arbolPM, nodosPM, 100);	
+	CrearArbolUltraProfundo(arbolPL, nodosPL, 250);
+	CrearArbolUltraProfundo(arbolPXL, nodosPXL, 500);
 	
 	// TIEMPOS
 	// ALG 1 -------------------------------
