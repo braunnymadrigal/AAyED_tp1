@@ -2,49 +2,49 @@
 
 #include <iostream>
 #include <limits>
-#include <vector>
 #include <utility>
+#include <vector>
 
+#include "arbolASP.hh"
 #include "colaLSE.hh"
-//#include "arbolASP.hh"
 //#include "arbolLSE.hh"
-#include "arbolHMIHD.hh"
+//#include "arbolHMIHD.hh"
 //#include "arbolHMIHD2.hh"
 
 class Algoritmos {
 public:
-  Arbol::Node HermanoIzq(Arbol *A, Arbol::Node n);
+    Arbol::Node HermanoIzq(Arbol *A, Arbol::Node n);
 
-  bool EtiqRepetidas(Arbol *A);
+    bool EtiqRepetidas(Arbol *A);
 
-  int AlturaNodoPreOrden(Arbol *A, Arbol::Node n);
+    int AlturaNodoPreOrden(Arbol *A, Arbol::Node n);
 
-  int ProfundidadNodo(Arbol *A, Arbol::Node nU);
+    int ProfundidadNodo(Arbol *A, Arbol::Node nU);
 
-  int CantNivelesPreOrden(Arbol *A);
+    int CantNivelesPreOrden(Arbol *A);
 
-  int CantNivelesPorNiveles(Arbol *A);
+    int CantNivelesPorNiveles(Arbol *A);
 
-  void ListarIesimoNivel(Arbol *A, int i);
+    void ListarIesimoNivel(Arbol *A, int i);
 
-  void ListarPreOrden(Arbol *A);
+    void ListarPreOrden(Arbol *A);
 
-  void ListarPorNiveles(Arbol *A);
+    void ListarPorNiveles(Arbol *A);
 
-  Arbol::Node BuscarEtiq(Arbol *A, char e);
+    Arbol::Node BuscarEtiq(Arbol *A, char e);
 
-  void BorrarSubArbol(Arbol *&A, Arbol::Node n);
+    void BorrarSubArbol(Arbol *&A, Arbol::Node n);
 
-  void ListarHijos(Arbol *A, Arbol::Node n);
+    void ListarHijos(Arbol *A, Arbol::Node n);
 
 private:
-  void AlturaNodoPreOrdenR(Arbol *A, Arbol::Node n, int &altura, int k);
-  
-  int CantNivelesPreOrdenR(Arbol *A, Arbol::Node n);
-  
-  void ListarIesimoNivelR(Arbol *A, Arbol::Node n, int i, int nivAct);
-  
-  void ListarPreOrdenR(Arbol *A, Arbol::Node n);
-  
-  void BorrarSubArbolR(Arbol *&A, Arbol::Node nh);
+    void AlturaNodoPreOrdenR(Arbol *A, Arbol::Node n, int &altura, int k);
+
+    int CantNivelesPreOrdenR(Arbol *A, Arbol::Node n);
+
+    void ListarIesimoNivelR(Arbol *A, Arbol::Node n, int i, int nivAct);
+
+    void ListarPreOrdenR(Arbol *A, Arbol::Node n);
+
+    void BorrarSubArbolR(Arbol *&A, Arbol::Node nh);
 };

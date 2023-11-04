@@ -2,9 +2,9 @@
 #include "tiempos.hh"
 
 int main() {
-  //Interfaz interfaz;
-  //interfaz.pruebas();
-  Tiempos tiempos;
-  tiempos.Ejecutar();
-  return 0;
+    // Interfaz interfaz;
+    // interfaz.pruebas();
+    Tiempos tiempos;
+    tiempos.Ejecutar();
+    return 0;
 }
