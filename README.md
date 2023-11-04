@@ -42,4 +42,4 @@ Ninguno.
 1. Navegar en menús.
 2. Usar operadores básicos a través de un menú (hace traducciones de etiqueta a nodo y viceversa).
 3. Usar algoritmos del árbol n-ario tal que si importa el orden entre los hijos de un nodo a través de un menú (hace traducciones de etiqueta a nodo y viceversa).
-4. Ver la eficiencia en tiempo de una estructura de datos del modelo árbol en distintas pruebas. En cada prueba se muestra su rendimiento para distintos tamaños, tipos de árbol, dicho rendimiento es mostrado para caso promedio y peor.
+4. Ver la eficiencia en tiempo de una estructura de datos del modelo árbol en distintas pruebas. En cada prueba se muestra su rendimiento para distintos tipos de árbol, dicho rendimiento es mostrado para caso promedio y peor si cabe el caso.
