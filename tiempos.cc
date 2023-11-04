@@ -8,9 +8,9 @@ void Tiempos::Ejecutar() {
     Arbol *arbolP = new Arbol;
     std::vector<Arbol::Node> *nodosP = new std::vector<Arbol::Node>;
 
-    CrearArbolSemiBalanceado(arbolB, nodosB, 100);
-    CrearArbolUltraAncho(arbolA, nodosA, 100);
-    CrearArbolUltraProfundo(arbolP, nodosP, 100);
+    CrearArbolSemiBalanceado(arbolB, nodosB, 30);
+    CrearArbolUltraAncho(arbolA, nodosA, 30);
+    CrearArbolUltraProfundo(arbolP, nodosP, 30);
 
     std::cout << "Balanceados:" << std::endl;
     std::cout << "\tEtiqRept:";

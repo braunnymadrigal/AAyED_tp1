@@ -1,0 +1,226 @@
+//// ASP S
+Balanceados:
+	EtiqRept:	TIEM: 2805      
+	ListHijs:	PEOR: 9498       PROM: 1061      
+	ProfNodo:	PEOR: 100        PROM: 49        
+	BorrSubA:	PEOR: 211        PROM: 66        
+Anchos:
+	EtiqRept:	TIEM: 2746      
+	ListHijs:	PEOR: 5461       PROM: 591       
+	ProfNodo:	PEOR: 90         PROM: 42        
+	BorrSubA:	PEOR: 140        PROM: 46        
+Profundos:
+	EtiqRept:	TIEM: 2685      
+	ListHijs:	PEOR: 4940       PROM: 584       
+	ProfNodo:	PEOR: 110        PROM: 77        
+	BorrSubA:	PEOR: 120        PROM: 44        
+
+
+
+//// ASP M
+Balanceados:
+	EtiqRept:	TIEM: 7224      
+	ListHijs:	PEOR: 10269      PROM: 466       
+	ProfNodo:	PEOR: 181        PROM: 55        
+	BorrSubA:	PEOR: 340        PROM: 85        
+Anchos:
+	EtiqRept:	TIEM: 3617      
+	ListHijs:	PEOR: 5260       PROM: 224       
+	ProfNodo:	PEOR: 70         PROM: 40        
+	BorrSubA:	PEOR: 141        PROM: 37        
+Profundos:
+	EtiqRept:	TIEM: 4288      
+	ListHijs:	PEOR: 4088       PROM: 219       
+	ProfNodo:	PEOR: 181        PROM: 116       
+	BorrSubA:	PEOR: 150        PROM: 37    
+
+
+
+//// ASP L
+Balanceados:
+	EtiqRept:	TIEM: 2364      
+	ListHijs:	PEOR: 11502      PROM: 312       
+	ProfNodo:	PEOR: 90         PROM: 45        
+	BorrSubA:	PEOR: 531        PROM: 162       
+Anchos:
+	EtiqRept:	TIEM: 2906      
+	ListHijs:	PEOR: 7274       PROM: 159       
+	ProfNodo:	PEOR: 60         PROM: 34        
+	BorrSubA:	PEOR: 120        PROM: 31        
+Profundos:
+	EtiqRept:	TIEM: 4309      
+	ListHijs:	PEOR: 4709       PROM: 167       
+	ProfNodo:	PEOR: 451        PROM: 252       
+	BorrSubA:	PEOR: 34054      PROM: 372     
+
+
+
+//// LSE S
+Balanceados:
+	EtiqRept:	TIEM: 2855      
+	ListHijs:	PEOR: 6703       PROM: 740       
+	ProfNodo:	PEOR: 250        PROM: 158       
+	BorrSubA:	PEOR: 621        PROM: 156       
+Anchos:
+	EtiqRept:	TIEM: 2104      
+	ListHijs:	PEOR: 6603       PROM: 689       
+	ProfNodo:	PEOR: 270        PROM: 144       
+	BorrSubA:	PEOR: 561        PROM: 153       
+Profundos:
+	EtiqRept:	TIEM: 3928      
+	ListHijs:	PEOR: 4178       PROM: 486       
+	ProfNodo:	PEOR: 260        PROM: 191       
+	BorrSubA:	PEOR: 431        PROM: 123       
+
+
+
+//// LSE M
+Balanceados:
+	EtiqRept:	TIEM: 2275      
+	ListHijs:	PEOR: 8707       PROM: 376       
+	ProfNodo:	PEOR: 381        PROM: 215       
+	BorrSubA:	PEOR: 731        PROM: 144       
+Anchos:
+	EtiqRept:	TIEM: 2525      
+	ListHijs:	PEOR: 6583       PROM: 242       
+	ProfNodo:	PEOR: 370        PROM: 166       
+	BorrSubA:	PEOR: 531        PROM: 122       
+Profundos:
+	EtiqRept:	TIEM: 2274      
+	ListHijs:	PEOR: 4879       PROM: 256       
+	ProfNodo:	PEOR: 1143       PROM: 529       
+	BorrSubA:	PEOR: 601        PROM: 135       
+
+
+
+//// LSE L
+Balanceados:
+	EtiqRept:	TIEM: 2445      
+	ListHijs:	PEOR: 8416       PROM: 233       
+	ProfNodo:	PEOR: 671        PROM: 455       
+	BorrSubA:	PEOR: 842        PROM: 226       
+Anchos:
+	EtiqRept:	TIEM: 2424      
+	ListHijs:	PEOR: 16010      PROM: 184       
+	ProfNodo:	PEOR: 621        PROM: 395       
+	BorrSubA:	PEOR: 721        PROM: 203       
+Profundos:
+	EtiqRept:	TIEM: 2574      
+	ListHijs:	PEOR: 5621       PROM: 230       
+	ProfNodo:	PEOR: 17814      PROM: 3887      
+	BorrSubA:	PEOR: 782        PROM: 247       
+
+
+
+//// HMIHD S
+Balanceados:
+	EtiqRept:	TIEM: 2074      
+	ListHijs:	PEOR: 8907       PROM: 939       
+	ProfNodo:	PEOR: 240        PROM: 171       
+	BorrSubA:	PEOR: 391        PROM: 98        
+Anchos:
+	EtiqRept:	TIEM: 2074      
+	ListHijs:	PEOR: 6232       PROM: 650       
+	ProfNodo:	PEOR: 281        PROM: 129       
+	BorrSubA:	PEOR: 391        PROM: 110       
+Profundos:
+	EtiqRept:	TIEM: 2164      
+	ListHijs:	PEOR: 4799       PROM: 530       
+	ProfNodo:	PEOR: 271        PROM: 185       
+	BorrSubA:	PEOR: 301        PROM: 79        
+
+
+
+//// HMIHD M
+Balanceados:
+	EtiqRept:	TIEM: 1804      
+	ListHijs:	PEOR: 7505       PROM: 298       
+	ProfNodo:	PEOR: 461        PROM: 303       
+	BorrSubA:	PEOR: 501        PROM: 95        
+Anchos:
+	EtiqRept:	TIEM: 1653      
+	ListHijs:	PEOR: 6963       PROM: 260       
+	ProfNodo:	PEOR: 311        PROM: 223       
+	BorrSubA:	PEOR: 33143      PROM: 1259      
+Profundos:
+	EtiqRept:	TIEM: 1964      
+	ListHijs:	PEOR: 4799       PROM: 208       
+	ProfNodo:	PEOR: 1694       PROM: 696       
+	BorrSubA:	PEOR: 641        PROM: 107       
+
+
+
+//// HMIHD L
+Balanceados:
+	EtiqRept:	TIEM: 2575      
+	ListHijs:	PEOR: 9939       PROM: 158       
+	ProfNodo:	PEOR: 1713       PROM: 963       
+	BorrSubA:	PEOR: 641        PROM: 134       
+Anchos:
+	EtiqRept:	TIEM: 2094      
+	ListHijs:	PEOR: 7514       PROM: 98        
+	ProfNodo:	PEOR: 572        PROM: 444       
+	BorrSubA:	PEOR: 761        PROM: 268       
+Profundos:
+	EtiqRept:	TIEM: 2404      
+	ListHijs:	PEOR: 4749       PROM: 93        
+	ProfNodo:	PEOR: 26070      PROM: 6622      
+	BorrSubA:	PEOR: 731        PROM: 218       
+
+
+
+//// HMIHD2 S
+Balanceados:
+	EtiqRept:	TIEM: 1533      
+	ListHijs:	PEOR: 7579       PROM: 1059      
+	ProfNodo:	PEOR: 100        PROM: 72        
+	BorrSubA:	PEOR: 481        PROM: 100       
+Anchos:
+	EtiqRept:	TIEM: 2525      
+	ListHijs:	PEOR: 5751       PROM: 601       
+	ProfNodo:	PEOR: 130        PROM: 65        
+	BorrSubA:	PEOR: 381        PROM: 100       
+Profundos:
+	EtiqRept:	TIEM: 1533      
+	ListHijs:	PEOR: 5621       PROM: 768       
+	ProfNodo:	PEOR: 110        PROM: 80        
+	BorrSubA:	PEOR: 371        PROM: 76        
+
+
+
+//// HMIHD2 M
+Balanceados:
+	EtiqRept:	TIEM: 1563      
+	ListHijs:	PEOR: 9450      PROM: 479       
+	ProfNodo:	PEOR: 121        PROM: 86        
+	BorrSubA:	PEOR: 451        PROM: 61        
+Anchos:
+	EtiqRept:	TIEM: 3217      
+	ListHijs:	PEOR: 6252       PROM: 241       
+	ProfNodo:	PEOR: 180        PROM: 71        
+	BorrSubA:	PEOR: 852        PROM: 111       
+Profundos:
+	EtiqRept:	TIEM: 1934      
+	ListHijs:	PEOR: 5461       PROM: 689       
+	ProfNodo:	PEOR: 190        PROM: 121       
+	BorrSubA:	PEOR: 361        PROM: 49        
+
+
+
+//// HMIHD2 L
+Balanceados:
+	EtiqRept:	TIEM: 1553      
+	ListHijs:	PEOR: 9418       PROM: 259       
+	ProfNodo:	PEOR: 460        PROM: 106       
+	BorrSubA:	PEOR: 430        PROM: 47        
+Anchos:
+	EtiqRept:	TIEM: 1604      
+	ListHijs:	PEOR: 9949       PROM: 127       
+	ProfNodo:	PEOR: 341        PROM: 115       
+	BorrSubA:	PEOR: 551        PROM: 133       
+Profundos:
+	EtiqRept:	TIEM: 1713      
+	ListHijs:	PEOR: 39555      PROM: 2232      
+	ProfNodo:	PEOR: 491        PROM: 273       
+	BorrSubA:	PEOR: 290        PROM: 41        
+  
